@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precinct 5.0 | Project Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter font style */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Animated gradient effect for the background */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1d2b3a, #2c3e50, #3498db, #2980b9);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Entrance animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header id="header" class="bg-gray-800 bg-opacity-90 backdrop-blur-sm text-white p-4 fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Precinct 5.0</h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="#features" class="hover:text-sky-400 transition-colors">Features</a>
+                <a href="#technologies" class="hover:text-sky-400 transition-colors">Technologies</a>
+                <a href="#canvas" class="hover:text-sky-400 transition-colors">Business Canvas</a>
+                <a href="#preview" class="hover:text-sky-400 transition-colors">Preview</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center text-white p-6 gradient-bg">
+            <div>
+                <h2 class="text-5xl md:text-6xl font-extrabold mb-4 animate-fade-in-up">Precinct 5.0</h2>
+                <p class="text-xl md:text-2xl max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.3s;">
+                    The Technological Solution for Predictive Crime Analysis with Artificial Intelligence, Big Data, and Machine Learning.
+                </p>
+            </div>
+        </section>
+
+        <!-- About the Project Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800">About the Project</h2>
+                    <p class="text-lg text-gray-600 mt-2">Modernizing public safety in Pernambuco.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md fade-in-up">
+                        <h3 class="text-2xl font-bold text-sky-600 mb-3">The Problem</h3>
+                        <p>Slow investigations, difficulty in identifying criminal patterns, and the lack of data integration hinder efficient crime prevention and resolution.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md fade-in-up" style="transition-delay: 0.2s;">
+                        <h3 class="text-2xl font-bold text-sky-600 mb-3">The Solution</h3>
+                        <p>A predictive analysis platform that supports the Civil Police, increasing case resolution rates, speeding up analysis, and identifying criminal hotspots.</p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md fade-in-up" style="transition-delay: 0.4s;">
+                        <h3 class="text-2xl font-bold text-sky-600 mb-3">Target Audience</h3>
+                        <p>Investigators, police intelligence sectors, universities, and research centers in public safety and data science.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800">Key Features</h2>
+                </div>
+                <!-- Feature 1 -->
+                <div class="flex flex-wrap items-center mb-16 fade-in-up">
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Predictive Heatmaps</h3>
+                        <p class="text-lg text-gray-600">Generates interactive geographical visualizations that show the intensity and concentration of crimes by neighborhood, allowing the identification of "hotspots" and assisting in preventive policing planning.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <img src="WhatsApp Image 2025-09-22 at 22.09.01.jpeg" alt="Crime Heatmap" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="flex flex-wrap-reverse items-center mb-16 fade-in-up">
+                    <div class="w-full md:w-1/2 p-4">
+                         <img src="image.png" alt="Analysis Filters" class="rounded-lg shadow-xl">
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Crime Analysis and Classification</h3>
+                        <p class="text-lg text-gray-600">Allows classifying and grouping occurrences by type, modus operandi, and location. The system offers dynamic filters based on Machine Learning models (Random Forest, SVM) for in-depth analysis.</p>
+                    </div>
+                </div>
+                 <!-- Feature 3 -->
+                <div class="flex flex-wrap items-center fade-in-up">
+                    <div class="w-full md:w-1/2 p-4">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Dashboards and Reports</h3>
+                        <p class="text-lg text-gray-600">Provides interactive dashboards with charts and maps, in addition to allowing the export of reports in PDF and integration with Power BI for complementary and personalized data visualizations.</p>
+                    </div>
+                    <div class="w-full md:w-1/2 p-4">
+                        <img src="image.png" alt="Interactive Dashboard" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section id="technologies" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800">Technologies Used</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                    <div class="fade-in-up"><div class="bg-gray-100 p-6 rounded-lg shadow-md font-semibold text-lg">PostgreSQL</div></div>
+                    <div class="fade-in-up" style="transition-delay: 0.1s;"><div class="bg-gray-100 p-6 rounded-lg shadow-md font-semibold text-lg">PostGIS</div></div>
+                    <div class="fade-in-up" style="transition-delay: 0.2s;"><div class="bg-gray-100 p-6 rounded-lg shadow-md font-semibold text-lg">Github</div></div>
+                    <div class="fade-in-up" style="transition-delay: 0.3s;"><div class="bg-gray-100 p-6 rounded-lg shadow-md font-semibold text-lg">Python</div></div>
+                    <div class="fade-in-up" style="transition-delay: 0.5s;"><div class="bg-gray-100 p-6 rounded-lg shadow-md font-semibold text-lg">Docker</div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Model Canvas Section -->
+        <section id="canvas" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold text-gray-800">Business Model Canvas</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Each canvas item is a card -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Key Partners</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Universities & R&D Centers</li><li>AI Startups</li><li>Public Safety Agencies</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Key Activities</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Data collection and integration</li><li>Development of predictive models</li><li>Information security assurance</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Value Proposition</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Predictive analysis platform</li><li>Identification of criminal hotspots</li><li>Increased case resolution rate</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Customer Relationships</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Continuous technical support</li><li>Workshops and training</li><li>Feedback collection for improvements</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Customer Segments</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Civil Police of Pernambuco</li><li>Universities and Researchers</li><li>Partner technology companies</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Key Resources</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Multidisciplinary team</li><li>Occurrence database</li><li>Technological infrastructure</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Channels</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Web Platform (Dashboards)</li><li>PDF Reports</li><li>Power BI Integration</li><li>APIs REST/GraphQL</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up col-span-1 md:col-span-2 lg:col-span-1">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Cost Structure</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Infrastructure and servers</li><li>Development team</li><li>Maintenance and security</li></ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg fade-in-up">
+                        <h3 class="text-xl font-bold text-sky-600 mb-3">Revenue Streams</h3>
+                        <ul class="list-disc list-inside text-gray-600"><li>Government investment</li><li>Agreements and partnerships</li><li>Innovation grants</li></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Preview Section -->
+        <section id="preview" class="py-20 bg-gray-800 text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-4xl font-bold">Platform in Action</h2>
+                    <p class="text-lg text-gray-300 mt-2">See a demonstration of the interface and features.</p>
+                </div>
+                <div class="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl fade-in-up">
+                     <video controls class="w-full">
+                        <source src="WhatsApp Video 2025-09-24 at 19.49.53.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-6">
+        <p>&copy; 2025 - Precinct 5.0 Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Logic for fade-in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Logic to change header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-gray-900');
+            } else {
+                header.classList.remove('bg-gray-900');
+            }
+        });
+    </script>
+</body>
+</html>
+
